@@ -18,7 +18,7 @@ class ProductView(ListView):
 
     model = Product
 
-    def get_queryset(self):
+    def get_queryset(self) -> dict:
         filter_text = (
             self.request.GET.get("filters")
             if self.request.GET.get("filters") != None
@@ -53,8 +53,6 @@ class ProductView(ListView):
             for date in date_products:
                 if date["url"] == product["url"]:
                     products[-1][date["consult_date"].strftime("%Y-%m-%d")] = date["c"]
-
-        print(len(products))
 
         return products
 
