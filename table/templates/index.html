@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <section>
+        <table id="table" 
+            class="table table-bordered">
+            <thead>
+                <tr>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    {% load static %}
+    <script src="{% static 'js/datatable.js' %}"></script>
+    
+{% endblock content %}
